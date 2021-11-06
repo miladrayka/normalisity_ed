@@ -234,7 +234,7 @@ def outliers_plot(
     plt.ylabel("Residual Error", fontsize=14)
     plt.title("Error Distribution", fontsize=16)
     if save:
-        plt.savefig("error_distribution.png.", dpi=300)
+        plt.savefig("error_distribution.png", dpi=300)
     plt.show()
 
     return fig
@@ -257,6 +257,8 @@ fig_outliers = outliers_plot(nonoutliers_df, outliers_df, color1, color2, save)
 
 
 st.pyplot(fig_outliers)
+
+st.download_button("Download outliers plot", data="error_distribution.png", filename="error_distribution.png")
 
 st.subheader("References")
 st.write(
