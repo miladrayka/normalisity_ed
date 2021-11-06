@@ -42,10 +42,10 @@ if option == "Example":
     st.write(f"Generate {int(number)} data points randomly from a normal distribution.")
 
     y_true = x_true * 2 + 5
-    st.write("Target values are generated using:     $y = x^{2} + 5$.")
+    st.write("Target values are generated using:     $y = x*2 + 5$.")
 
     y_predict = x_true * 1.8 + 4
-    st.write("But, predicted values have derived from:   $y = x^{1.8} + 4$.")
+    st.write("But, predicted values have derived from:   $y = x*1.8 + 4$.")
 
     df = pd.DataFrame(
         {"Target": y_true.ravel(), "Predicted": y_predict.ravel()},
