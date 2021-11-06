@@ -30,7 +30,7 @@ st.write(
 $e_{M, i} = r_{i} - C_{M,i}$"""
 )
 
-option = st.selectbox("Choose one:", ("Example", "My Data"))
+option = st.selectbox("Choose one:", ("Example", "My Data"), index=0)
 
 if option == "Example":
 
@@ -168,7 +168,7 @@ fig = plot_qqplot(residual_error, color, save)
 
 st.pyplot(fig)
 
-st.write("Caution: To download plot, first check *Save QQ-plot in .png* then push the below button")
+st.write("Caution: To download plot, first check *Save QQ-plot in .png* then the download button appears.")
 
 if save:
     
@@ -219,11 +219,13 @@ fig_hist = histogram_and_normal_plot(mse, rmsd, residual_error, color1, color2, 
 
 st.pyplot(fig_hist)
 
-st.write("Caution: To download plot, first check *Save histogram plot in .png* then push the below button")
+st.write("Caution: To download plot, first check *Save histogram plot in .png* then the download button appears.")
 
-with open("residual_histogram.png", 'rb') as file:
+if save:
     
-    st.download_button("Download outliers plot", data=file, file_name="residual_histogram.png")
+    with open("residual_histogram.png", 'rb') as file:
+    
+        st.download_button("Download outliers plot", data=file, file_name="residual_histogram.png")
     
 st.subheader("Outliers Plot")
 
@@ -272,11 +274,13 @@ fig_outliers = outliers_plot(nonoutliers_df, outliers_df, color1, color2, save)
 
 st.pyplot(fig_outliers)
 
-st.write("Caution: To download plot, first check *save outliers plot in .png* then push below button")
+st.write("Caution: To download plot, first check *save outliers plot in .png* then the download button appears.")
 
-with open("error_distribution.png", 'rb') as file:
+if save:
     
-    st.download_button("Download outliers plot", data=file, file_name="error_distribution.png")
+    with open("error_distribution.png", 'rb') as file:
+    
+        st.download_button("Download outliers plot", data=file, file_name="error_distribution.png")
 
 st.subheader("References")
 st.write(
