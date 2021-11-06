@@ -170,9 +170,11 @@ st.pyplot(fig)
 
 st.write("Caution: To download plot, first check *Save QQ-plot in .png* then push the below button")
 
-with open("qqplot.png", 'rb') as file:
+if save:
     
-    st.download_button("Download outliers plot", data=file, file_name="qqplot.png")
+    with open("qqplot.png", 'rb') as file:
+    
+        st.download_button("Download outliers plot", data=file, file_name="qqplot.png")
 
 st.subheader("Histogram of Error Distribution")
 
