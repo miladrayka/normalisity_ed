@@ -228,7 +228,7 @@ def outliers_plot(
     fig = plt.figure(figsize=(10, 8))
     plt.scatter(nonoutliers_df["Target"], nonoutliers_df["Residual"], s=50, c=color1)
     plt.scatter(
-        outliers_df["Predicted"], outliers_df["Residual"], s=50, c=color2, marker="^"
+        outliers_df["Target"], outliers_df["Residual"], s=50, c=color2, marker="^"
     )
     plt.xlabel("Experimental", fontsize=14)
     plt.ylabel("Residual Error", fontsize=14)
