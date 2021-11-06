@@ -168,7 +168,7 @@ fig = plot_qqplot(residual_error, color, save)
 
 st.pyplot(fig)
 
-st.write("Caution: To download plot, first check *"Save QQ-plot in .png* then push the below button")
+st.write("Caution: To download plot, first check *Save QQ-plot in .png* then push the below button")
 
 with open("qqplot.png", 'rb') as file:
     
@@ -217,7 +217,7 @@ fig_hist = histogram_and_normal_plot(mse, rmsd, residual_error, color1, color2, 
 
 st.pyplot(fig_hist)
 
-st.write("Caution: To download plot, first check *Save histogram plot in .png.* then push the below button")
+st.write("Caution: To download plot, first check *Save histogram plot in .png* then push the below button")
 
 with open("residual_histogram.png", 'rb') as file:
     
