@@ -43,6 +43,10 @@ This *Normalisity_ED* is a Web App based on Streamlit package. For using *Normal
 
 `streamlit run normalisity.py`
 
+Or simply use Web App at streamlithost:
+
+[Normalisity_ED](https://share.streamlit.io/miladrayka/normalisity_ed/main/normalisity.py)
+
 ## Reference
 
 All texts are extracted from *Mach. Learn.: Sci. Technol., 2020, 1, 035011* paper.
