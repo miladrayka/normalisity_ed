@@ -39,7 +39,7 @@ Which *env* is the location to create the virtual environment. Now you can insta
 
 ## Usage
 
-This *Normalisity_ED* is a Web App based on Streamlit package. For using *Normalisity_ED*, you just need run the following code:
+This *Normalisity_ED* is a Web App based on Streamlit package. For using *Normalisity_ED*, you just need to run the following code:
 
 `streamlit run normalisity.py`
 
