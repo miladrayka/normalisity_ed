@@ -258,7 +258,11 @@ fig_outliers = outliers_plot(nonoutliers_df, outliers_df, color1, color2, save)
 
 st.pyplot(fig_outliers)
 
-st.download_button("Download outliers plot", data="error_distribution.png", file_name="error_distribution.png")
+st.write("Caution: To download plot, first check *save outliers plot in .png* then push below button")
+
+with open("error_distribution.png", 'rb') as file:
+    
+    st.download_button("Download outliers plot", data=file, file_name="error_distribution.png")
 
 st.subheader("References")
 st.write(
